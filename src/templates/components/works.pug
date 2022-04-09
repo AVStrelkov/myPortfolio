@@ -1,0 +1,61 @@
+script(type="text/x-template")#previews-container 
+    .work-content
+        display(
+            :currentWork="currentWork",
+            :works="works"
+            :currentIndex="currentIndex"
+            @slide="slide"
+        )
+        info(
+            :currentWork="currentWork"
+        )  
+     
+script(type="text/x-template")#previews-display
+    .work__left
+        .website
+            img(:src="currentWork.photo").work__pic            
+            .website__down
+                thumbs(
+                    :works="reversedWorks",
+                    :currentWork="currentWork",
+                )
+            btns(
+                @slide="$emit('slide', $event)"
+            )
+            .number {{currentIndex + 1}}
+
+script(type="text/x-template")#previews-thumbs
+    ul.website__list
+        li.website__item(
+            v-for="slide in works" :key="slide.id"
+            :class="{active: currentWork.id == slide.id}"
+        )
+            button.website__link
+                img(:src="slide.photo").website__pic
+                
+
+script(type="text/x-template")#previews-btn
+    .website__arrow
+        button(
+            @click="$emit('slide', 'left')"
+        ).website__arrow-link.arrow-left
+            +icon('arrow-down', 'arrow') 
+        button(
+            @click="$emit('slide', 'right')"
+        ).website__arrow-link.arrow-right
+            +icon('arrow-down', 'arrow') 
+
+script(type="text/x-template")#previews-info
+    .work__right
+        .technology-stack
+            tags(
+                :tags="tagsArray"
+            )
+            .technology-stack__title {{currentWork.title}}
+            .technology-stack__info {{currentWork.desc}}
+            a(:href="currentWork.link").technology-stack__link Посмотреть сайт
+                +icon('link', 'stack__link')
+
+script(type="text/x-template")#previews-tag
+    ul.stack-list
+        li.stack-item(v-for="tag in tags") {{tag}}

@@ -1,0 +1,246 @@
+.work{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.work .container{
+    display: flex;
+    flex-flow: row wrap;
+    @include tablets{
+        flex-direction: column;
+    }
+}
+
+.work__title{
+    font-size: 36px;
+    font-weight: bold;
+    width: 100%;
+    color: #111111;
+    margin-bottom: 80px;
+    @include tablets{
+        margin: 30px 0;    
+    }
+}
+
+.work-content{
+    display: flex;
+    @include tablets{
+        flex-direction: column;
+    }
+}
+
+.work__left{
+    width: 60%;
+    @include tablets{
+        width: 85%;    
+    }
+    @include phones{
+        width: 100%;
+    }
+}
+
+.work__right{
+    padding-left: 130px;
+    color: rgba(51, 60, 73);
+    width: 40%;
+    @include tablets{
+        margin-top: 30px;
+        width: 100%;  
+        padding: 0;  
+    }
+}
+
+
+.website{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.work__pic{
+    width: 100%;
+}
+
+.website__down{
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    display: flex;
+    width: 70%;
+}
+
+.website__list{
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    @include phones{
+        display: none;
+    }
+}
+
+.website__item {
+    min-width: 25%;
+}
+
+
+
+.website__link{
+    padding: 0;
+    display: flex;
+    width: 100%;
+    /* &:hover .website__pic{
+        outline-offset: -2px;
+        outline: 2px solid #DC9322;
+    } */
+}
+
+.active{
+    .website__pic{
+        outline-offset: -2px;
+        outline: 2px solid #DC9322;
+    }
+}
+
+.website__pic{
+    display: flex;
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+    height: 60px;
+}
+
+.website__arrow{
+    position: absolute;
+    right: -40px;
+    width: 40px;
+    height: 60px;
+    bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include phones{
+        width: 50px;
+        height: 100px;
+        right: 0;
+        bottom: 10%;
+    }
+}
+
+.website__arrow-link{
+    display: flex;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    background: #333C49;
+    &:hover{
+        .arrow{
+            width: 35%;
+            fill: #ffffff;
+        }
+    }
+}
+
+.number{
+    position: absolute;
+    font-size: 300px;
+    color: #E6E6E6;
+    font-weight: 800;
+    left: 94%;
+    top: 12%;
+    z-index: -100;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1;
+    @include phones{
+        display: none;
+    }
+}
+
+.arrow-right{
+    bottom: 0;
+}
+
+.arrow-left{
+    top: 0;
+    .arrow{
+        transform: rotate(180deg);
+    }
+}
+
+.arrow{
+    width: 30%;
+    fill: #e6e6e6a6;
+}
+
+
+.technology-stack__title, .technology-stack__info,.technology-stack__link{
+    @include tablets{
+        margin-top: 20px;
+    }
+}
+
+.technology-stack{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    @include tablets{
+        align-items: center;
+        width: 58%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    @include phones{
+        width: 100%;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+}
+
+.stack-list{
+    display: flex;
+}
+
+.stack-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2px;
+    padding: 14px 22px;
+    background: #F3F6F9;
+    border-radius: 50px;
+    color: rgba(51, 60, 73, 0.8);
+}
+
+.technology-stack__title{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.technology-stack__info{
+    line-height: 2;
+}
+
+.technology-stack__link{
+    display: flex;
+    color: #586ED3;
+    position: relative;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 40px;
+    margin-bottom: -20px;
+    @include tablets{
+        margin: 30px;
+    }
+}
+
+.stack__link{
+    position: absolute;
+    height: 18px;
+    right: 104%;
+    fill: #586ED3;
+}

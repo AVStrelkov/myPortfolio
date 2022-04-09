@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Liderpoiska | basket</title>
+    <link href="./main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="maincontent">
+        <header class="header">
+            <div class="container"><a class="logo" href="./index.html"><img class="logo__pic"
+                        src="./ce6ef0c116cdb849375be14b4f31a4f9.png"></a><a class="basket" href="./basket.html">
+                    <div class="basket__img"><svg class="basket__icon" viewBox="0 0 28 23" preserveAspectRatio="none">
+                            <use xlink:href="sprite.svg#basket"></use>
+                        </svg></div>
+                    <div class="basket__text">Корзина</div>
+                    <div class="basket__circle">1</div>
+                </a></div>
+        </header>
+        <section class="basket-product">
+            <div class="container">
+                <h1 class="title">Корзина</h1>
+                <ul class="basket-product__list"></ul>
+                <div class="total">Сумма <span class="total__num"></span> ₽</div>
+            </div>
+        </section>
+        <section class="request">
+            <form class="form" id="form" action="#" method="POST">
+                <div class="form-title">Пожалуйста, представьтесь</div><input class="name" name="name"
+                    placeholder="Введите Имя" required> <input class="phone" name="phone" placeholder="+7(000)000-00-00"
+                    required>
+                <div class="phone__error error-none">Введен не коректный теленфон</div><input class="email" type="email"
+                    name="email" placeholder="Email" required>
+                <div class="email__error error-none">Введен не коректный Email</div><input class="btn btn-bgcolor"
+                    type="submit" value="оформить заказ" name="btn">
+            </form>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__row"></div>
+                <div class="footer__text">Тестовое задание на должность младшего программиста «Лидера поиска», ver. 3.0
+                </div>
+            </div>
+        </footer>
+        <div class="overlay overlay-none">
+            <div class="overlay__blok"><a class="overlay__close" href="#"></a>
+                <div class="overlay__content">
+                    <div class="overlay__title">Спасибо <span class="overlay__name">Татьяна</span>, ваш заказ <span
+                            class="overlay__number">№165796</span> оформлен.</div>
+                    <div class="overlay__info">В ближайшее время мы свяжемся с вами по телефону <span
+                            class="overlay__phone">+7 (999) 999 - 99 - 99</span> для его подтверждения.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

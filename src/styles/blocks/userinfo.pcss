@@ -1,0 +1,281 @@
+.welcomsektion{
+    height: 100%;
+    display: flex;
+    background: url("~images/content/userinfo.jpg") center top / cover no-repeat;
+    flex-direction: column;
+}
+
+.human{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+.header{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 36px;
+    line-height: 1.5;
+    font-weight: 800;
+    margin-left: 8px;
+}
+
+.nav{
+    margin-right: 105px;
+    @include tablets{
+        display: none;
+    }
+}
+
+.nav__list{
+    display: flex;
+}
+
+.nav__item{
+    margin-right: 60px;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.nav__link{
+    text-decoration: none;
+    &:hover{
+        opacity: 0.3;
+    }
+}
+
+.social{
+    @include tablets{
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        margin-right: 10%;
+    }
+    @include phones{
+        display: none;
+    }
+}
+
+.social__list{
+    display: flex;
+}
+
+.social__link{
+    &:hover{
+        .social__icon{
+            opacity: 1;
+        }
+    }
+}
+
+.social__icon{
+    fill: #ffffff;
+    opacity: .3;
+}
+
+.social__item{
+    margin-right: 36px;
+    &:last-child{
+        margin-right: 0;
+    }
+    width: 25px;
+    height: 25px;
+}
+
+.hamburgermenu{
+    display: none;
+    width: 30px;
+    height: 25px;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 1;
+    &:hover{
+        opacity: .3;
+    }
+    @include tablets{
+        display: flex;
+    }
+}
+
+.hamburgermenu__row{
+    width: 100%;
+    height: 5px;
+    background-color: #ffffff;
+    border-radius: 3px;
+}
+
+.userinfo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    @include tablets{
+        flex-direction: column;
+        margin: 0 auto;
+        align-items: center;
+    }
+}
+
+.userinfo__text{
+    text-align: right;
+    font-size: 18px;
+    margin: 15px 54px 0 0;
+    color: rgba(255, 255, 255, 0.5);
+    @include tablets{
+        margin: 0;
+        text-align: center;
+    }
+    @include phones{
+        font-size: 16px;
+    }
+}
+
+.userinfo__name{
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 72px;
+    line-height: 1;
+    font-weight: 800;
+    @include tablets{
+        text-align: center;
+    }
+    @include phones{
+        font-size: 36px;
+    }
+}
+
+.scroll{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.scroll__link{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}
+
+.scroll__down{
+    height: 16px;
+    fill: #ffffff;
+}
+
+.about{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    @include phones{
+        flex-direction: column;
+    }
+}
+
+.about__right{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 0 25px;
+    width: 52%;
+    @include phones{
+        margin: 20px 0;
+    }
+}
+
+.about__left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.about__left, .about__right{
+    @include phones{
+        width: 100%;
+    }
+}
+
+.about__pic{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    overflow: hidden;
+    margin: 30px 70px 0 0;
+    @include phones{
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.about__user{
+    max-width: 100%;
+}
+
+.table{
+    width: 100%;
+    margin:70px 0 0 10px;
+}
+
+.table__column{
+    line-height: 2;
+    &:first-child{
+        opacity: .3;
+    }
+}
+
+.about__hello{  
+    font-weight: 600;  
+    opacity: .8;
+    @include phones{
+        font-size: 16px;
+    }
+}
+
+.about__name{
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: bold;
+    margin-top: 20px;
+    @include phones{
+        font-size: 26px;
+    }
+}
+
+.about__text{
+    margin-top: 20px;
+    line-height: 2;
+    opacity: .8;
+    width: 90%;
+    @include phones{
+        width: 100%;
+    }
+}
+
+.about__ps{
+    line-height: 2;
+    margin-top: 92px;
+    font-style: italic;
+    position: relative;
+    opacity: .8;
+    font-weight: 400;
+    &::after{
+        content: "*";
+        position: absolute;
+        top: -20px;
+        right: 105%;
+        font-size: 48px;
+        color: #DB0200;
+        opacity: .5;
+    }
+    @include phones{
+        margin-top: 20px;
+    }
+}

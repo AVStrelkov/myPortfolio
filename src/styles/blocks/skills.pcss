@@ -1,0 +1,148 @@
+.skills{
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    background: url("~images/content/bg_skills.jpg") center top / cover no-repeat;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hands__img{
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 80%;
+    margin-bottom: -50px;
+    @include tablets{
+        transform: rotate(-90deg);
+        right: 0;
+    }
+    @include phones{
+        display: none;
+    }
+}
+
+.skill__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+    margin-left: 120px;
+    @include tablets{
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+    }
+    @include phones{
+        justify-content: center;
+        width: 95%;
+    }
+}
+
+.skills__title{
+    display: flex;
+    font-size: 30px;
+    font-weight: 700;
+    @include phones{
+        flex-flow: row wrap;
+        width: 95%;
+    }
+}
+
+.skills__about{
+    width: 600px;
+    font-weight: 600;
+    line-height: 2;
+    color: rgb(255, 255, 255, .8);
+    margin-top: 37px;
+    @include tablets{
+        text-align: center;
+    }
+    @include phones{
+        width: 95%;
+        text-align: left;
+    }
+}
+
+.widgets{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+    @include tablets{
+        align-items: center;
+    }
+    @include phones{
+        width: 95%;
+        margin: 0;
+    }
+}
+
+.widget-row__title{
+    font-size: 24px;
+    margin-top: 50px;
+    font-weight: bold;
+    @include phones{
+        margin-top: 20px;
+    }
+}
+
+.widgit__name{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 30px;
+    @include phones{
+        flex-flow: row wrap;
+        margin: 15px;
+    }
+}
+
+.widget-row__list{
+    display: flex;
+    @include phones{
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+}
+
+.widget-row__item{
+    font-size: 18px;
+    color: rgb(255, 255, 255, .5);
+    width: 138px;
+    height: 138px;
+    position: relative;
+    text-align: center;
+    line-height: 138px;
+    margin-right: 10px;
+    font-weight: bold;
+    @include phones{
+        margin-right: 0;
+    }
+}
+
+.skill__circle-shape{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+.skill__circle{
+    fill: transparent;
+    &-under{
+        stroke: #E9E9E9;
+        stroke-width: 3px;
+        opacity: .1;
+    }
+    &-above{
+        stroke-width: 10px;
+        stroke-dasharray: 251;
+        stroke-dashoffset: 120;
+
+    }
+}
+

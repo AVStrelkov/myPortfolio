@@ -1,0 +1,147 @@
+.reviews{
+    background: url("~images/content/foliage.jpg") center top / cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.reviews__top{
+    display: flex;
+    /* margin-left: 50px; */
+    @include tablets{
+        justify-content: center;
+    }
+    @include phones{
+        flex-flow: row wrap;
+        width: 100%;
+    }
+}
+
+.reviews__title{
+    margin: 0 150px 40px 0;
+    font-size: 36px;
+    font-weight: bold;
+    @include phones{
+        margin: 0;
+        font-size: 25px;
+    }
+}
+
+.reviews__arrow{
+    padding-top: 20px;
+}
+
+.reviews__arrow-link{
+    display: flex;
+    width: 53px;
+    height: 53px;
+    border: 2px solid #FFFFFF;
+    justify-content: center;
+    align-items: center; 
+    border-radius: 50px;   
+    margin-right: 28px;
+    &:hover{
+        opacity: 0.5;
+    }
+    @include phones{
+        margin: 0 14px;
+    }
+}
+
+.reviews-left{
+        transform: rotate(180deg);
+}
+
+.rewiews__arrow-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews__bottom{
+    margin: 60px 0;
+}
+
+.reviews__info{
+    display: flex;
+    overflow: hidden;
+}
+
+.reviews__content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-width: 50%;
+    flex-direction: column;
+    padding:0 100px;
+    margin-left: 40px;
+    @include tablets{
+        width: 45%;
+        margin: 0 0 0 100px;
+    }
+    &:last-child{
+        @include phones{
+            display: none;
+        }
+    }
+    @include phones{
+        margin: 0;
+        width: 100%;
+    }
+}
+
+.reviews__quote{
+    position: absolute;
+    width: 77px;
+    fill: #303133;
+    /* transform: rotate(-180deg); */
+    right: 90%;
+    top: 10px;
+    @include tablets{
+        width: 50px;
+    }
+    @include phones{
+        display: none;
+    }
+}
+
+
+.reviews__text{
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 30px;
+    min-height: 160px;
+}
+
+.reviews__user{
+    display: flex;
+    align-items: center;
+}
+
+.reviews__user-avatar{
+    border-radius: 50%;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+}
+
+.user__pic{
+    weight: 100%;
+}
+
+.reviews__user-about{
+    margin-left: 30px;
+}
+
+.reviews__user-name{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.reviews__user-prof{
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 18px;
+    margin-top: 12px;
+
+}

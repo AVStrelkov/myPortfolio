@@ -1,0 +1,146 @@
+.footer{
+    background: #222427;
+    padding-top: 70px;
+    .container{
+        display: flex;
+    }
+    @include tablets{
+        min-height: 500px;
+    }
+    .container{
+        @include phones{
+            flex-direction: column;
+        }
+    }
+    
+}
+
+.footer__left{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin: 0 0 78px 0px;
+    @include tablets{
+        width: 490px;
+    }
+    @include phones{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.year{
+    font-size: 48px;
+    line-height: 1;
+}
+
+.name{
+    font-size: 18px;
+    line-height: 1.9;
+    margin-top: 14px;
+}
+
+.footer__right{
+    display: flex;
+    flex-direction: column;
+    margin-left: 110px;
+    @include tablets{
+        margin-left: 0;
+    }
+
+}
+
+.footer__nav {
+    margin-top: 10px;
+    .nav__list{
+        display: flex;
+        /* width: 100%; */
+        flex-flow: row wrap;
+    }
+    .nav__item{
+        display: flex;
+        /* width: 50%; */
+        margin: 10px 20px 0 0;
+        @include phones{
+            width: 50%;
+            margin: 10px 0;
+        }
+    }
+    @include phones{
+        width: 100%;
+        display: flex;
+    }
+}
+
+.userinfo__text-left{
+    color: rgba(255, 255, 255, 0.5);
+    text-align: left;
+    line-height: 2;
+    margin-top: 18px;
+}
+
+.footer__info {
+    display: flex;
+    margin-top: 48px;
+    justify-content: space-between;
+    .social{
+        @include tablets{
+            justify-content: flex-start;
+        }
+        @include phones{
+            display: flex;
+        }
+    }
+    .social__item{
+        margin:30px 45px 0 0;
+        @include tablets{
+            height: 100%;
+        }
+    }
+    .social__link{
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        width: 50px;
+        height: 50px;
+        padding: 11px;
+        border-radius: 50%;
+        display: flex;
+        align-content: center;
+        &:hover{
+            border: 1px solid rgba(255, 255, 255);
+        }
+    }
+    @include tablets{
+        margin-top: 15px;
+        flex-direction: column;
+    }
+}
+
+.footer__info-colum{
+    line-height: 2;
+    width: 55%;
+    &:first-child{
+        width: 45%;
+        padding-right: 15px;
+        @include tablets{
+            width: 100%;
+        }
+        @include phones{
+            padding: 0;
+        }
+    }
+    @include tablets{
+        width: 100%;
+        margin-top: 30px;
+    }
+    @include phones{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+.author{
+    margin-top: 27px;
+    font-weight: 600;
+    font-style: italic;
+}

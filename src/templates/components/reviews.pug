@@ -1,0 +1,23 @@
+script(type="text/x-template")#reviews-container
+    .rewiews-container
+        .reviews__top
+            h2.reviews__title Что обо мне говорят
+            //- .reviews__arrow.reviews__arrow-left
+            //- a.reviews__arrow-link.reviews-left(href="#")
+            //-     +icon('arrow-down', 'arrow') 
+            //- .reviews__arrow.revievs__arrow-right
+            //- a.reviews__arrow-link.reviews-right(href="#")
+            //-     +icon('arrow-down', 'arrow')
+        .reviews__bottom
+            ul.reviews__info
+                li.reviews__content(v-for="review in reviews" :key="review.id")
+                    +icon('quote', 'reviews__quote')
+                    .reviews__text 
+                        p {{review.text}}
+                    .reviews__user 
+                        .reviews__user-avatar
+                            img(:src="review.pic").user__pic
+                        .reviews__user-about
+                            .reviews__user-name {{review.name}}
+                            .reviews__user-prof {{review.prof}}
+                

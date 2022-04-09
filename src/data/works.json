@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "title": "Бургеры",
+        "skills": "Html, Css, JavaScript",
+        "photo": "1.jpg",
+        "link": "https://avstrelkov.github.io/burger/app/",
+        "desc": "Выпусная работа кураса Web для начинающих онлайн школы Loftschool"
+    },
+    {
+        "id": 2,
+        "title": "Морской Бой",
+        "skills": "Html, Css, JavaScript",
+        "photo": "2.jpg",
+        "link": "https://avstrelkov.github.io/JS-example/",
+        "desc": "Игра ниписана при прочтении книги Фримен, Робсон – Изучаем программирование на JavaScript"
+    },
+    {
+        "id": 3,
+        "title": "Тестовое задание",
+        "skills": "Html, Css",
+        "photo": "3.jpg",
+        "link": "https://avstrelkov.github.io/avtodor/app/",
+        "desc": "тестовое задание Web студии CAPYBARA digital"
+    },
+    {
+        "id": 4,
+        "title": "Тестовое задание",
+        "skills": "Html, Css, JavaScript",
+        "photo": "4.jpg",
+        "link": "https://avstrelkov.github.io/testLiderpoiska/dist/",
+        "desc": "Тестовое задание Web студии Лидер поистк"
+    }
+]
