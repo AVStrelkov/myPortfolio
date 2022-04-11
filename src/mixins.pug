@@ -4,4 +4,4 @@ mixin icon(name, className)
     use(xlink:href=`sprite.svg#${icon.id.replace('-usage', '')}`)
 
 mixin image(path, className)
-  img(src=require(.`images/${path}`).default class=className)
+  img(src=require(./`images/${path}`).default class=className)
